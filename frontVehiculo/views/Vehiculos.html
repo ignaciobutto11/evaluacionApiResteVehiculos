@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehículos</title>
+    <link rel="stylesheet" href="../views/style.css">
+    <link rel="stylesheet" href="../views/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+</head>
+<body>
+    
+<h1>Vehículos</h1>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Agregar Vehículo</button>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Vehículo</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Marca:</label>
+            <input type="text" class="form-control" id="marca">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Modelo:</label>
+            <input type="text" class="form-control" id="modelo">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Año:</label>
+            <input type="year" class="form-control" id="año">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Patente:</label>
+            <input type="text " class="form-control" id="patente">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Km:</label>
+            <input type="number" class="form-control" id="km">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Fecha de Ingreso:</label>
+            <input type="date" class="form-control" id="fechaDeIngreso">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Disponible:</label>
+            <input type="checkbox" class="form-check-input" id="disponible">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button onclick="AgregarVehiculo()" type="button" class="btn btn-primary">Agregar Vehículo</button>
+      </div>
+    </div>
+  </div>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Marca</th>
+      <th scope="col">Modelo</th>
+      <th scope="col">Año</th>
+      <th scope="col">Patente</th>
+      <th scope="col">Km</th>
+      <th scope="col">Fecha de Ingreso</th>
+      <th scope="col">Disponible</th>
+    </tr>
+  </thead>
+  <tbody class = tablaVehiculos>
+    <!-- Aquí se agregarán los vehículos dinámicamente -->
+  </tbody>
+</table>
+
+
+
+    <script src="../views/bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+    <script src="../views/js/jquery.js"></script>
+    <script src="../views/js/Vehiculo.js"></script>
+</body>
+</html>

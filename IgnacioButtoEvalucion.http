@@ -1,0 +1,6 @@
+@IgnacioButtoEvalucion_HostAddress = http://localhost:5293
+
+GET {{IgnacioButtoEvalucion_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
