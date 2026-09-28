@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Vehículos</title>
+    <link rel="stylesheet" href="../VehiculoFront/Boostrap/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../VehiculoFront/Vehiculo.css">
+    
+</head>
+<body>
+    <h1>Gestión de Vehículos</h1>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Nuevo Vehículo</button>
+
+<!-- MODAL NUEVO -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Nuevo Vehículo
+                </h1>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form class="formulario">
+
+                    <div class="campo">
+                        <label for="MarcaNuevo" class="col-form-label">
+                            Marca:
+                        </label>
+                        <input type="text"
+                            class="form-control"
+                            id="MarcaNuevo">
+                    </div>
+
+                    <div class="campo">
+                        <label for="ModeloNuevo" class="col-form-label">
+                            Modelo:
+                        </label>
+                        <input type="text"
+                            class="form-control"
+                            id="ModeloNuevo">
+                    </div>
+
+                    <div class="campo">
+                        <label for="AñoNuevo" class="col-form-label">
+                            Año:
+                        </label>
+                        <input type="number"
+                            class="form-control"
+                            id="AñoNuevo">
+                    </div>
+
+                    <div class="campo">
+                        <label for="PatenteNuevo" class="col-form-label">
+                            Patente:
+                        </label>
+                        <input type="text"
+                            class="form-control"
+                            id="PatenteNuevo">
+                    </div>
+
+                    <div class="campo">
+                        <label for="KmNuevo" class="col-form-label">
+                            Km:
+                        </label>
+                        <input type="number"
+                            class="form-control"
+                            id="KmNuevo">
+                    </div>
+
+                    <div class="campo">
+                        <label for="FechaDeIngresoNuevo" class="col-form-label">
+                            Fecha de ingreso:
+                        </label>
+                        <input type="date"
+                            class="form-control"
+                            id="FechaDeIngresoNuevo">
+                    </div>
+
+                    <div class="campo-disponible">
+                        <label for="DisponibleNuevo" class="col-form-label">
+                            Disponible:
+                        </label>
+                        <input type="checkbox"
+                            class="form-check-input"
+                            id="DisponibleNuevo">
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Cerrar
+                </button>
+
+                <button onclick="AgregarVehiculo()"
+                        type="button"
+                        class="btn btn-primary">
+                    Agregar Vehículo
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- MODAL EDITAR -->
+<div class="modal fade" id="modalEditar" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">
+                    Editar Vehículo
+                </h1>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form class="formulario">
+
+                    <input type="hidden" id="idEditar">
+
+                    <div class="campo">
+                        <label for="MarcaEditar" class="col-form-label">
+                            Marca:
+                        </label>
+                        <input type="text"
+                            class="form-control"
+                            id="MarcaEditar">
+                    </div>
+
+                    <div class="campo">
+                        <label for="ModeloEditar" class="col-form-label">
+                            Modelo:
+                        </label>
+                        <input type="text"
+                            class="form-control"
+                            id="ModeloEditar">
+                    </div>
+
+                    <div class="campo">
+                        <label for="AñoEditar" class="col-form-label">
+                            Año:
+                        </label>
+                        <input type="number"
+                            class="form-control"
+                            id="AñoEditar">
+                    </div>
+
+                    <div class="campo">
+                        <label for="PatenteEditar" class="col-form-label">
+                            Patente:
+                        </label>
+                        <input type="text"
+                            class="form-control"
+                            id="PatenteEditar">
+                    </div>
+
+                    <div class="campo">
+                        <label for="KmEditar" class="col-form-label">
+                            Km:
+                        </label>
+                        <input type="number"
+                            class="form-control"
+                            id="KmEditar">
+                    </div>
+
+                    <div class="campo">
+                        <label for="FechaDeIngresoEditar" class="col-form-label">
+                            Fecha de ingreso:
+                        </label>
+                        <input type="date"
+                            class="form-control"
+                            id="FechaDeIngresoEditar">
+                    </div>
+
+                    <div class="campo campo-disponible">
+                        <label for="DisponibleEditar" class="col-form-label">
+                            Disponible:
+                        </label>
+                        <input type="checkbox"
+                            class="form-check-input"
+                            id="DisponibleEditar">
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Cerrar
+                </button>
+
+                <button onclick="EditarVehiculo()"
+                        type="button"
+                        class="btn btn-primary">
+                    Guardar cambios
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<table class="table">
+<thead>
+    <tr>
+    <th scope="col">#</th>
+    <th scope="col">Marca</th>
+    <th scope="col">Modelo</th>
+    <th scope="col">Año</th>
+    <th scope="col">Patente</th>
+    <th scope="col">Km</th>
+    <th scope="col">FechaDeIngreso</th>
+    <th scope="col">Disponible</th>
+    </tr>
+</thead>
+<tbody class="table-group-divider" id="tablaVehiculo">
+    <!-- Aquí se llenarán los datos de los vehículos -->
+
+</tbody>
+</table>
+
+
+
+    <script src="../VehiculoFront/Boostrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../VehiculoFront/js/Vehiculo.js"></script>
+    <script src="../VehiculoFront/js/jquery.js"></script>
+</body>
+</html>

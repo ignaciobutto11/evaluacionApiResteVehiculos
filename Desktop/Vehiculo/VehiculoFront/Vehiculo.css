@@ -1,0 +1,70 @@
+*{  
+    margin: 10px;
+    padding: 10px
+}
+.table {
+    width: 100%;
+    border: 1px solid #030303;
+    border-radius: 12px;
+    overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 20px;
+    width: 100%;
+}
+
+/* Cada campo */
+.formulario .campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+/* Inputs más estirados */
+.formulario .campo input:not([type="checkbox"]),
+.formulario .campo select {
+    width: 100%;
+    min-width: 0;
+    height: 40px;
+    padding: 6px 10px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.campo-disponible {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+}
+
+/* Checkbox grande y verde */
+.campo-disponible input[type="checkbox"] {
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    accent-color: #198754;
+    cursor: pointer;
+}
+
+
+/* Checkbox grande y verde */
+.campo-disponible .form-check-input {
+    width: 68px;
+    height: 68px;
+    margin: 0;
+    accent-color: #198754;
+    cursor: pointer;
+}
+.campo-disponible .form-check-input:checked {
+    background-color: #198754;
+    border-color: #198754;
+}
