@@ -842,3 +842,4 @@ C:\Users\tutor\OneDrive\Desktop\Evaluaci-nApiIgnacioButto-main\obj\Debug\net10.0
 C:\Users\tutor\OneDrive\Desktop\Evaluaci-nApiIgnacioButto-main\obj\Debug\net10.0\IgnacioButtoEvalucion.pdb
 C:\Users\tutor\OneDrive\Desktop\Evaluaci-nApiIgnacioButto-main\obj\Debug\net10.0\IgnacioButtoEvalucion.genruntimeconfig.cache
 C:\Users\tutor\OneDrive\Desktop\Evaluaci-nApiIgnacioButto-main\obj\Debug\net10.0\ref\IgnacioButtoEvalucion.dll
+C:\Users\tutor\OneDrive\Desktop\Evaluaci-nApiIgnacioButto-main\obj\Debug\net10.0\IgnacioButtoEvalucion.sourcelink.json
